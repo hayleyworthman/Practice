@@ -1,0 +1,24 @@
+import string
+
+
+def triple_threat(letter: str) -> str:
+    """
+    Play Triple Threat
+
+    :param letter: letter to check
+    :return: The correct word ("Trick", "Treat", or "Triple threat")
+    or letter if it's not a vowel or in the string, "Hayley is smart".
+    """
+    vowel = "o", "u"
+    string = "Hayley is smart"
+    winning_vowels = "a", "e", "i"
+    if letter in vowel:
+        return("Trick")
+    elif letter in winning_vowels:
+        return("Treat")
+    elif letter in string.casefold():
+        return("Triple Threat")
+    return(letter)
+
+for i in string.ascii_lowercase:
+    print(triple_threat(i))
