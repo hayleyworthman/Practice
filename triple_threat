@@ -6,19 +6,31 @@ def triple_threat(letter: str) -> str:
     Play Triple Threat
 
     :param letter: letter to check
+    :param number: number to check
     :return: The correct word ("Trick", "Treat", or "Triple threat")
-    or letter if it's not a vowel or in the string, "Hayley is smart".
+    or number if it's not divisible by 3 or 10.
     """
-    vowel = "o", "u"
-    string = "Hayley is smart"
-    winning_vowels = "a", "e", "i"
-    if letter in vowel:
+    if number % 3 == 0:
         return("Trick")
-    elif letter in winning_vowels:
+    elif number % 10 == 0:
         return("Treat")
-    elif letter in string.casefold():
+    elif number % 30 == 0:
         return("Triple Threat")
-    return(letter)
+    return str(number)
 
-for i in string.ascii_lowercase:
-    print(triple_threat(i))
+
+input("Play Triple Threat.    Press ENTER to begin:")
+print()
+
+next_number = 0
+while next_number < 99:
+    next_number += 1
+    print(triple_threat(next_number))
+    next_number += 1
+    correct_answer = triple_threat(next_number)
+    players_answer = input("Your turn: ")
+    if players_answer != correct_answer.casefold():
+        print("Wrong, Buddy. The correct answer was {}".format(correct_answer))
+        break
+else:
+    print("Congrats, Friend! You reached {}.".format(next_number))
