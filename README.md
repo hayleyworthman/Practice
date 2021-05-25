@@ -1,4 +1,4 @@
 # Practice 
-Join me as I practice coding in Python and JavaScript, using coding to tell funny stories that are initiated from my own person truth.
+Join me as I practice coding in Python and JavaScript, using coding to tell funny stories and real life uses.
 
 Have fun!
